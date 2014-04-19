@@ -42,28 +42,28 @@
 - (void)testCountReturnsTheNumberOfValues
 {
     NSNumber *count = [self.basket valueForKeyPath:@"@count"];
-    XCTAssertEqualObjects(count, @(4));
+    XCTAssertEqualObjects(count, ____);
 }
 
 - (void)testSumReturnsTheSumOfValues
 {
     NSNumber *totalPrice = [self.basket valueForKeyPath:@"@sum.price"];
-    XCTAssertEqualObjects(totalPrice, @(720));
+    XCTAssertEqualObjects(totalPrice, ____);
 }
 
 - (void)testAvgReturnsTheAverageValue
 {
     NSNumber *averagePrice = [self.basket valueForKeyPath:@"@avg.price"];
-    XCTAssertEqualObjects(averagePrice, @(180));
+    XCTAssertEqualObjects(averagePrice, ____);
     
     NSNumber *averageLengthOfName = [self.basket valueForKeyPath:@"@avg.name.length"];
-    XCTAssertEqualObjects(averageLengthOfName, @(5.5));
+    XCTAssertEqualObjects(averageLengthOfName, ____);
 }
 
 - (void)testMaxReturnsTheMaximumValueInTheCollection
 {
     NSNumber *maximumPrice = [self.basket valueForKeyPath:@"@max.price"];
-    XCTAssertEqualObjects(maximumPrice, @(300));
+    XCTAssertEqualObjects(maximumPrice, ____);
     
     NSDate *latestDate = [self.basket valueForKeyPath:@"@max.boughtAt"];
     XCTAssertEqualObjects(latestDate, [[Fruit grape] boughtAt]);
@@ -72,7 +72,7 @@
 - (void)testMinReturnsTheMinimumValueInTheCollection
 {
     NSNumber *minimumPrice = [self.basket valueForKeyPath:@"@min.price"];
-    XCTAssertEqualObjects(minimumPrice, @(100));
+    XCTAssertEqualObjects(minimumPrice, ____);
 }
 
 - (void)testSelfKeyPathCanBeUsedToOperateValueOfItsObjects
@@ -80,9 +80,9 @@
     NSArray *prices = @[ @(100), @(120), @(200), @(300) ];
     
     NSNumber *averagePrice = [prices valueForKeyPath:@"@avg.self"];
-    XCTAssertEqualObjects(averagePrice, @(180));
+    XCTAssertEqualObjects(averagePrice, ____);
     
-    NSNumber *maxValue = [prices valueForKeyPath:@"@max.self"];
+    NSNumber *maxValue = [prices valueForKeyPath:____];
     XCTAssertEqualObjects(maxValue, @(300));
 }
 

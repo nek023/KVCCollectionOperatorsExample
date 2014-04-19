@@ -38,11 +38,11 @@
     Fruit *apple = [Fruit apple];
     
     NSString *name = [apple valueForKey:@"name"];
-    XCTAssertEqualObjects(name, @"Apple");
+    XCTAssertEqualObjects(name, ____);
     
     id price = [apple valueForKey:@"price"];
-    XCTAssertTrue([price isKindOfClass:[NSNumber class]]);
-    XCTAssertEqualObjects(price, @(100));
+    XCTAssertTrue([price isKindOfClass:____]);
+    XCTAssertEqualObjects(price, ____);
 }
 
 - (void)testValueForKeyPathToAccessToTheSecondLevelProperties
@@ -50,13 +50,13 @@
     Fruit *banana = [Fruit banana];
     
     NSNumber *lengthOfName = [banana valueForKeyPath:@"name.length"];
-    XCTAssertEqualObjects(lengthOfName, @(6));
+    XCTAssertEqualObjects(lengthOfName, ____);
 }
 
 - (void)testKeyPathToReturnItself
 {
     NSString *string = [@"Banana" valueForKeyPath:@"self"];
-    XCTAssertEqualObjects(string, @"Banana");
+    XCTAssertEqualObjects(string, ____);
 }
 
 - (void)testAccessingToDictionaryByUsingKVC
@@ -69,10 +69,10 @@
                              };
     
     NSString *text = [status valueForKey:@"text"];
-    XCTAssertEqualObjects(text, @"Hi, friends!");
+    XCTAssertEqualObjects(text, ____);
     
     NSString *screen_name = [status valueForKeyPath:@"user.screen_name"];
-    XCTAssertEqualObjects(screen_name, @"questbeat");
+    XCTAssertEqualObjects(screen_name, ____);
 }
 
 @end
